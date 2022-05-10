@@ -35,12 +35,11 @@ Animations
     0% {
       transform: translateY(0px);
     }
-    25% {
-      transform: translateY(-50px)
+    50% {
+      transform: translateY(-50px) rotate(0deg);
     }
-    75% { 
-      transform: translateY(-50px); 
-      transform: rotate(180deg);
+    75% {
+      transform: translateY(-50px) rotate(360deg);
     }
     100% { 
       transform: translateY(0px);
@@ -53,6 +52,12 @@ Animations
   to {
     transform: translateY(15px);
   }
+}
+/* ********************************************* */
+
+/* ********************************************* */
+a:hover, button {
+  cursor: pointer;
 }
 /* ********************************************* */
 
@@ -551,6 +556,7 @@ footer a:hover {
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-position: 0% 50%;
 }
 /* ********************************************* */
 
