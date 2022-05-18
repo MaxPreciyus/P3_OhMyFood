@@ -1,6 +1,14 @@
 /* ***************************************
 Animations 
 ****************************************** */
+@keyframes fadHeart {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
 @keyframes checkSpin {
   0% {
     font-size: 12px;
