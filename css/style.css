@@ -1,12 +1,12 @@
 /* ***************************************
 Animations 
 ****************************************** */
-@keyframes fadHeart {
+@keyframes slideHeart {
   0% {
-    scale: 0;
+    background-position: 0% 1em;
   }
   100% {
-    scale: 1;
+    background-position: 0% 0em;
   }
 }
 @keyframes checkSpin {
@@ -558,13 +558,16 @@ footer a:hover {
   font-size: 1.4em;
 }
 .restaurant-preview .fa-heart:hover {
-  transition: color 0.5s;
+  animation: slideHeart 1s;
+  animation-fill-mode: forwards;
   font-weight: bold;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  background-position: 0% 50%;
+  background-position: 0% 1em;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 /* ********************************************* */
 
@@ -611,7 +614,7 @@ Affichage Desktop
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
     justify-content: flex-start;
     width: 90%;
@@ -829,7 +832,7 @@ Affichage Desktop
   }
   .menu__container {
     justify-content: flex-start;
-    overflow: scroll;
+    overflow-y: auto;
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 400px;
